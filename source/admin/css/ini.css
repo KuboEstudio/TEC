@@ -1,0 +1,64 @@
+/* =INITIAL 
+   v2.1, by Faruk Ates - www.kurafire.net
+   Addendum by Robert Nyman - www.robertnyman.com 
+   Addition by Christian Montoya - www.christianmontoya.net */
+
+/* Neutralize styling:
+   Elements we want to clean out entirely:*/
+html, body, form, fieldset{
+        font:100%/120% Arial, Helvetica, sans-serif;
+        padding:0;
+        margin:0;
+}
+/* Neutralize styling:
+   Elements with a vertical margin:*/
+h1, h2, h3, h4, h5, h6, p, pre,
+blockquote, ul, ol, dl, address{
+        margin:1em 0;
+        padding:4px 0;
+}
+/* Apply left margin:
+   Only to the few elements that need it:*/
+li, dd, blockquote{
+        margin-left:1em;
+}
+/* Miscellaneous conveniences:*/
+form label{
+        cursor:pointer;
+}
+fieldset{
+        border:none;
+}
+input, select, textarea{
+		font-family:inherit;
+        font-size:100%;
+}
+/* 	This odd 100.01% value for the font size compensates for several browser bugs.
+	First, setting a default body font size in percent (instead of em) eliminates an IE/Win
+	problem with growing or shrinking fonts out of proportion if they are later set in ems in
+	other elements. Additionally, some versions of Opera will draw a default font-size of 100%
+	too small compared to other browsers. Safari, on the other hand, has a problem with a font-size
+	of 101%. The current "best" suggestion is to use the 100.01% value for this property.	*/
+html{font-size:100.01%;}
+body{font-size:1em;}
+
+ul
+{	padding:0;
+	margin:0;
+	}
+li
+{	list-style-type:none;
+	padding:0;
+	margin:0;
+	}
+	
+table{
+	font-size:0.6em;
+}
+
+td{padding:2px 4px;}
+
+table, th, td { 
+	vertical-align:top; 
+}
+

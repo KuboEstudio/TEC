@@ -1,0 +1,81 @@
+/* TOPWRAP */
+
+body{
+	overflow:auto;
+	border:none;
+	padding:0;margin:0;
+	color:#ccc;
+	font:11px/16px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	background-color:#E8EEF7;
+	}
+	
+a{
+	/*text-decoration:none;*/
+	color:#eee;
+}
+
+.top-wrap{
+	background:#003399;
+	overflow:hidden;
+	padding:5px 0;margin:0;
+	height:73px;width:100%;
+	}
+
+.top-bar{
+	overflow:hidden;
+	padding:0;margin:0 auto;
+	width:960px;
+	font-size:13px;
+	}
+
+#msgError {
+	position:absolute;
+	top:0; 
+	left:0; 
+	width:100%; 
+	background-color:red; 
+	height:63px; 
+	padding:10px 0; 
+	text-align:center; 
+	color:white; 
+	font-weight:bold; 
+	opacity:0.7; 
+	filter:alpha(opacity=70);
+}
+	
+#WelcomeMsg {
+	background-color:#E8EEF7;
+	padding-top:0.5em;
+}
+
+.innerMsg {
+	color:#303030;
+	font-size:12px;
+	width:932px;
+	padding:30px;
+	background-color:#ffffff;
+	margin-left: auto; 
+	margin-right: auto;
+	border-top:2px solid #c9c9c9;
+	border-left:2px solid #c9c9c9;
+	border-bottom:2px solid #444444;
+	border-right:2px solid #444444;
+	text-align: justify; 
+}
+
+.innerMsg a{
+	color:#303030;
+	font-weight:bold;
+}
+
+#iframe{ overflow:hidden; } /*this is to remove the scroll when not needed*/
+
+#iframe, iframe{
+	border:none;
+	height:100%;width:100%;
+	}
+	
+iframe .ss-form-container
+{
+	width:950px !important;
+}

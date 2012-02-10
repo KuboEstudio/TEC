@@ -1,0 +1,222 @@
+body{backgrond:#fff;font-size:0.8em;padding:18px 0 0 0;border-top:#182c63 solid 9px;}
+
+#container{}
+
+#logo{
+width:170px;
+height:170px;
+margin:0 auto;
+}
+	#logo{
+	background:transparent url(../images/itesm.jpg) no-repeat top;
+	text-indent:-9999px;
+	display:block;
+	}
+	#logo a{
+	display:block;
+	width:170px;
+	height:170px;
+	}
+
+/* tutorial */
+
+.form{
+background:#294593;
+border:#122456 solid 1px;
+width:280px;
+top:40px;
+position:relative;
+margin:0 auto;
+padding:20px;
+height:auto;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+}
+
+p{margin:0;padding:14px 0 0 0;}
+
+input, textarea{
+	border:solid 1px #1e3169;
+	margin:2px 0 0 0;
+	padding:9px;
+	width:260px;
+	outline:0;
+	background:-webkit-gradient(linear, left top, left top, from(#eee), color-stop(4%, #ccc), to(#eee));
+	background:-moz-linear-gradient(top, #eee, #ddd 1px, #eee 25px);
+	box-shadow:rgba(0,0,0, 0.2) 0px 0px 8px;
+	-moz-box-shadow:rgba(0,0,0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow:rgba(0,0,0, 0.2) 0px 0px 8px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	}
+
+input:hover, input:focus{
+
+	}
+
+
+.form label{
+	position:relative;
+	margin:0 0 0 5px;
+	text-align:left;
+	pointer:default;
+	color:#fcfcfc;
+	display:block;
+	width:280px;
+	}
+
+.submit input{
+	background:#15275a;
+	padding:10px;
+	width:280px;
+	border-top:#3d59a8 solid 1px;
+	border-bottom:#081435 solid 1px;
+	color:#fcfcfc;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	}
+
+.submit input:active{
+	background:#142453	;
+	border-top:#3d59a8 solid 1px;
+	border-botton:#081435 solid 1px;
+
+	}
+
+/* combo */
+
+.combo{
+	margin:2px 0 0 0;
+	width:280px;
+	height:36px;
+	padding:5px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	border:none;
+	}
+
+li option{background:red;}
+
+/* generales */
+	.breakline{
+	background:transparent;
+	color:transparent;
+	clear:both;
+	width:100%;
+	height:1px;
+	margin:18px 0;
+	border-top:rgba(255,255,255,0.3) dotted 1px;
+	}
+
+
+/**/
+
+.tzSelect{
+
+	/* This is the container of the new select element */
+
+	height:34px;
+	display:inline-block;
+	min-width:200px;
+	position:relative;
+
+	/* Preloading the background image for the dropdown */
+	background:url("../images/dropdown_slice.png") no-repeat -99999px;
+
+}
+
+.tzSelect .selectBox{
+	position:absolute;
+	height:100%;
+	width:280px;
+	z-index:800;
+	line-height:34px;
+	text-align:center;
+	text-shadow:1px 1px 0 #EEEEEE;
+	color:#666666;
+	background:url('../images/select_slice.png') repeat-x #ddd;
+	background-image:url('../images/select_slice.png'),url('../images/select_slice.png'),url('../images/select_slice.png'),url('../images/select_slice.png');
+	background-position:0 -136px, right -204px, 50% -68px, 0 0;
+	background-repeat: no-repeat, no-repeat, no-repeat, repeat-x;
+	cursor:pointer;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+}
+
+.tzSelect .selectBox:hover,
+.tzSelect .selectBox.expanded{
+	background-position:0 -170px, right -238px, 50% -102px, 0 -34px;
+	color:#eee;
+	text-shadow:1px 1px 0 #223986;
+}
+
+.tzSelect .dropDown{
+	                   z-index:999;
+	position:absolute;
+	top:40px;
+	left:0;
+	width:280px;
+	border:1px solid #0a1439;
+	border-width:0 1px 1px;
+	list-style:none;
+
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+
+	-moz-box-shadow:0 0 4px #0a1439;
+	-webkit-box-shadow:0 0 4px #0a1439;
+	box-shadow:0 0 4px #0a1439;
+	color:#aaa;
+}
+
+
+.tzSelect li{
+	height:35px;
+	cursor:pointer;
+	position:relative;
+
+	/* Again, using CSS3 multiple backgrounds with a fallback */
+
+	background:#0d193f;
+	border-bottom:#18285d dotted 1px;
+
+}
+.tzSelect li:nth-child(even){background:#13204b;}
+.tzSelect li:last-child{border-bottom:none;}
+
+.tzSelect li:hover{
+	background:#213370;
+	border-bottom:#22346b dotted 1px;
+}
+
+.tzSelect img {
+	display:none;
+}
+
+.tzSelect li span{
+	left:5px;
+	position:absolute;
+	top:10px;
+}
+
+.tzSelect li i{
+	color:#999999;
+	display:block;
+	font-size:12px;
+}
+
+.tzSelect li img{
+	left:9px;
+	position:absolute;
+	top:13px;
+}
+
+#logo-kubo	{margin:0 auto;width:60px;height:100px;position:relative;}
+#footer{border-top:#bbb dotted 1px;height:;background:;top:60px;position:relative;width:260px;margin:0 auto;}
+#footer p{text-align:center;margin:0 0 10px 0;font-size:11px;color:#888;}

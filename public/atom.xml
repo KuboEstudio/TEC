@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2012-02-10T00:50:57-07:00</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[hello world]]></title>
+    <link href="http://yoursite.com/blog/2012/02/09/hello-world/"/>
+    <updated>2012-02-09T00:05:00-07:00</updated>
+    <id>http://yoursite.com/blog/2012/02/09/hello-world</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span>hola</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="k">require_once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g_campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/</span><span class="si">$ADMIN_DIR</span><span class="s2">/country/common.php&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="k">require_once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g_campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/classes/SimplePager.php&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">camp_load_translation_strings</span><span class="p">(</span><span class="s2">&quot;api&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$f_country_language_selected</span> <span class="o">=</span> <span class="nx">camp_session_get</span><span class="p">(</span><span class="s1">&#39;f_language_selected&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$f_country_offset</span> <span class="o">=</span> <span class="nx">camp_session_get</span><span class="p">(</span><span class="s1">&#39;f_country_offset&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$f_country_language_selected</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nv">$f_country_language_selected</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nv">$ItemsPerPage</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$languages</span> <span class="o">=</span> <span class="nx">Language</span><span class="o">::</span><span class="na">GetLanguages</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="k">array</span><span class="p">(),</span> <span class="k">true</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$numCountries</span> <span class="o">=</span> <span class="nx">Country</span><span class="o">::</span><span class="na">GetNumCountries</span><span class="p">(</span><span class="nv">$f_country_language_selected</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$pager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimplePager</span><span class="p">(</span><span class="nv">$numCountries</span><span class="p">,</span> <span class="nv">$ItemsPerPage</span><span class="p">,</span> <span class="s2">&quot;index.php?&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$crumbs</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Configure&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Countries&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="k">echo</span> <span class="nx">camp_html_breadcrumbs</span><span class="p">(</span><span class="nv">$crumbs</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">&lt;?php</span>  <span class="k">if</span> <span class="p">(</span><span class="nv">$g_user</span><span class="o">-&gt;</span><span class="na">hasPermission</span><span class="p">(</span><span class="s2">&quot;ManageCountries&quot;</span><span class="p">))</span> <span class="p">{</span> <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">&lt;table BORDER=&quot;0&quot; CELLSPACING=&quot;0&quot; CELLPADDING=&quot;1&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;tr&gt;</span>
+</span><span class='line'><span class="x">        &lt;td&gt;&lt;a href=&quot;add.php&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="nx">putGS</span><span class="p">(</span><span class="s2">&quot;Add new&quot;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/a&gt;&lt;/td&gt;</span>
+</span><span class='line'><span class="x">    &lt;/tr&gt;</span>
+</span><span class='line'><span class="x">&lt;/table&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,5 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+
+  <nav role="navigation">{% include navigation.html %}</nav>
+      {{ content | expand_urls: root_url }}

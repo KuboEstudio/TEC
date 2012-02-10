@@ -1,0 +1,61 @@
+/* Morning Copy Google Form Styling with validation */
+
+body
+{font-family:Arial,sans-serif;color:#000;}
+
+.ss-q-title
+{display:block;font-weight:bold;
+color: #45321c;}
+
+.ss-form-container
+{
+width:950px;
+}
+
+h1 {color: #45321c;}
+
+ul
+{padding:0 0 1em 1em}ol{padding:0 0 1em 1.3em}
+
+li
+{line-height:1.5em;padding:0 0 .5em 0}
+
+a {
+color: #c9743d;
+text-decoration: none;}
+
+a:hover {
+color: #c9743d;
+text-decoration: underline;}
+p
+{padding:0 0 1em 0}
+
+input,select,textarea,option
+{font-family:inherit;font-size: 12px;}
+
+.ss-textarea
+{max-width:99%}
+
+.ss-q-help
+{display:block;color:#666;margin:.1em 0 .25em 0}
+
+.ss-q-long
+{width:98%; max-width:98%}
+
+.ss-form-entry
+{margin-bottom:1.5em}
+
+.ss-choices
+{list-style:none;margin:.5em 0 0 0;padding:0}
+
+.ss-required-asterisk
+{color:#c43b1d}
+
+label
+{display:block;cursor:pointer}
+
+ul label
+{display:inline}
+
+label.error 
+{display: list-item; color: #ff0600; font-size: 12px; list-style-position: inside; padding: 5px 0 0; float:right; }
